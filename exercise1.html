@@ -1,0 +1,32 @@
+<html>
+<body>
+<h1>Password Validator</h1>
+<br>
+<label for="pass1">Enter Password:</label>
+<input type = "text" id="pass1" name="pass1" value="">
+<label for="pass2">ReEnter Password:</label>
+<input type = "text" id="pass2" name="pass2" value="">
+<button value="VALIDATE" onclick="Comparison()">VALIDATE</button>
+</body>
+<script type="text/javascript">
+    function Comparison(){
+        var pass1 = document.getElementById("pass1").value;
+        var pass2 = document.getElementById("pass2").value;
+        let length1 = pass1.length
+        let length2 = pass2.length
+        if (length1 < 8 || length2 < 8){
+            alert("Password Needs to be at Least 8 Characters Long")
+        }
+        else{
+            if (pass1 === pass2){
+                alert("Passwords Match!")
+            }
+            else{
+                alert("Passwords DO NOT Match!")
+            }
+        }
+    }
+</script>
+</html>
+
+

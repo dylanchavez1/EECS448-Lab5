@@ -1,0 +1,40 @@
+<html>
+<body>
+<p id = "pText" style= "border: 2px solid white">Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text Random Text </p>
+<b><u><label>This uses the Hex color scale(also their typed out names)</label></u></b><br>
+<label>Paragraph Background Color:</label>
+<input type="text" id= "backColorInputText"><br>
+<label>Paragraph Border width:</label>
+<input type="text" id= "borWidthInputText"><br>
+<label>Paragraph Border Color:</label>
+<input type="text" id= "borColorInputText"><br>
+<input type="button" id = "bColorButton" value = "Update" onclick = "changeBack();changeBorWidth();changeBor()"><br>
+<style>
+p
+{
+background-color = white:
+border-width = medium:
+border-color = white:
+}
+</style>
+<script>
+	function changeBack(){
+		let color = document.getElementById('backColorInputText').value;
+		var change = document.getElementById("pText");
+		change.style.backgroundColor = color;
+	}
+	function changeBorWidth(){
+		let width = parseInt(document.getElementById('borWidthInputText').value);
+		var change = document.getElementById("pText");
+		change.style.borderWidth = width;
+	}
+	function changeBor(){
+		let color = document.getElementById('borColorInputText').value;
+		var change = document.getElementById("pText");
+		change.style.borderColor = color;
+	}
+</script>
+</body>
+<style>
+</style>
+</html>

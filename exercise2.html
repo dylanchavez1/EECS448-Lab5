@@ -1,0 +1,51 @@
+<html>
+<body>
+<h1>Picture Slideshow</h1>
+<button value="Previous" onclick="changePrevious()">Previous</button>
+<img id = "image" src = "https://kuathletics.com/wp-content/uploads/2019/05/1200px-Kansas_Jayhawks_logo.png" width ="500" height="300">
+<button value ="Next" id="clickme" onclick="changeNext()">Next</button>
+</body>
+<script type ="text/javascript">
+function changePrevious(){
+	var image = document.getElementById("image");
+	console.log(image.src)
+	
+	if(image.src.match("https://kuathletics.com/wp-content/uploads/2019/05/1200px-Kansas_Jayhawks_logo.png")){
+		image.src = "https://kuathletics.com/wp-content/uploads/2019/07/main-twitter-image.jpg";
+	}
+	else if(image.src.match("https://kuathletics.com/wp-content/uploads/2019/07/main-twitter-image.jpg")){
+		image.src = "https://ku.edu/images/jpgs/social-large.jpg";
+	}
+	else if(image.src.match("https://ku.edu/images/jpgs/social-large.jpg")){
+		image.src = "https://upload.wikimedia.org/wikipedia/commons/c/c0/University_of_Kansas_%22KU%22_logo.png";
+	}
+	else if(image.src.match("https://upload.wikimedia.org/wikipedia/commons/c/c0/University_of_Kansas_%22KU%22_logo.png")){
+		image.src = "https://yt3.ggpht.com/ytc/AMLnZu9Lzt2-rPVRV-Cf2Yk606xIsYF0-C7qDU6S2Gds8A=s900-c-k-c0x00ffffff-no-rj";
+	}
+	else if(image.src.match("https://yt3.ggpht.com/ytc/AMLnZu9Lzt2-rPVRV-Cf2Yk606xIsYF0-C7qDU6S2Gds8A=s900-c-k-c0x00ffffff-no-rj")){
+		image.src = "https://kuathletics.com/wp-content/uploads/2019/05/1200px-Kansas_Jayhawks_logo.png";
+	}
+	
+}
+function changeNext(){
+    var image = document.getElementById("image");
+	console.log(image.src)
+	
+	if(image.src.match("https://kuathletics.com/wp-content/uploads/2019/05/1200px-Kansas_Jayhawks_logo.png")){
+		image.src = "https://yt3.ggpht.com/ytc/AMLnZu9Lzt2-rPVRV-Cf2Yk606xIsYF0-C7qDU6S2Gds8A=s900-c-k-c0x00ffffff-no-rj";
+	}
+	else if (image.src.match("https://yt3.ggpht.com/ytc/AMLnZu9Lzt2-rPVRV-Cf2Yk606xIsYF0-C7qDU6S2Gds8A=s900-c-k-c0x00ffffff-no-rj")){
+		image.src = "https://upload.wikimedia.org/wikipedia/commons/c/c0/University_of_Kansas_%22KU%22_logo.png";
+	}
+	else if (image.src.match("https://upload.wikimedia.org/wikipedia/commons/c/c0/University_of_Kansas_%22KU%22_logo.png")){
+		image.src = "https://ku.edu/images/jpgs/social-large.jpg";
+	}
+	else if (image.src.match("https://ku.edu/images/jpgs/social-large.jpg")){
+		image.src = "https://kuathletics.com/wp-content/uploads/2019/07/main-twitter-image.jpg"
+	}
+	else if (image.src.match("https://kuathletics.com/wp-content/uploads/2019/07/main-twitter-image.jpg")){
+		image.src = "https://kuathletics.com/wp-content/uploads/2019/05/1200px-Kansas_Jayhawks_logo.png";
+	}
+}
+</script>
+</html>
